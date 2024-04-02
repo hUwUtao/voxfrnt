@@ -1,0 +1,52 @@
+---
+const links = [
+  {
+    ref: "/",
+    label: "Home",
+  },
+  {
+    ref: "/account",
+    label: "Tài khoản",
+  },
+];
+
+const curpath = Astro.url.pathname;
+---
+
+<header>
+  <a href="/"> <strong>VNL</strong></a>
+  {
+    links.map((m, i) => (
+      <a
+        class:list={{
+          active: curpath.startsWith(m.ref),
+        }}
+        href={m.ref}
+      >
+        {m.label}
+      </a>
+    ))
+  }
+</header>
+
+<style>
+  header {
+    background-color: #111c;
+    padding: 1.4rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  a,
+  strong {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 1em;
+  }
+  strong {
+    color: #fff;
+  }
+  a.active {
+    color: #fff;
+    border-bottom: solid 8px #6366f1;
+  }
+</style>

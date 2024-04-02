@@ -1,0 +1,168 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "mysql",
+  "tables": {
+    "authme": {
+      "name": "authme",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "mediumint(8) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "username": {
+          "autoincrement": false,
+          "name": "username",
+          "type": "char(16)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "realname": {
+          "autoincrement": false,
+          "name": "realname",
+          "type": "char(16)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "autoincrement": false,
+          "name": "password",
+          "type": "char(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ip": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ip",
+          "type": "char(40)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lastlogin": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "lastlogin",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "x": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "x",
+          "type": "double",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "y": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "y",
+          "type": "double",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "z": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "z",
+          "type": "double",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "world_void": {
+          "default": "''world''",
+          "autoincrement": false,
+          "name": "world_void",
+          "type": "char(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "regdate": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "regdate",
+          "type": "bigint(20) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "regip": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "regip",
+          "type": "char(39)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "yaw": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "yaw",
+          "type": "float",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pitch": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "pitch",
+          "type": "float",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "email",
+          "type": "char(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "isLogged": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "isLogged",
+          "type": "smallint(6)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hasSession": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "hasSession",
+          "type": "smallint(6)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "totp": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "totp",
+          "type": "char(32)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "username": {
+          "name": "username",
+          "columns": ["username"]
+        }
+      }
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
